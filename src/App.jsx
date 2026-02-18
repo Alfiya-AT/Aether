@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
  * Features: Current weather, 5-day history, 7-day strip, animated UI.
  */
 
-const WEATHERSTACK_API_KEY = 'b087f69051908460b94ed65c77a15842'; // Replace with your actual key
+const WEATHERSTACK_API_KEY = import.meta.env.VITE_WEATHERSTACK_API_KEY || 'YOUR_API_KEY'; // Secured via .env
 
 const App = () => {
     const [activeTab, setActiveTab] = useState('Now');
