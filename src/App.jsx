@@ -1081,8 +1081,8 @@ const calculateSunPos = () => {
 
     // SVG coords for path "M 10 50 Q 100 -20 190 50"
     const x = 10 + ratio * 180;
-    // Parabolic approximation for Q point
-    const y = 50 - 4 * ratio * (1 - ratio) * 70;
+    // Parabolic approximation matching the Bezier curve peak (y=15 at ratio=0.5)
+    const y = 50 - 4 * ratio * (1 - ratio) * 35;
     return { x, y };
 };
 
